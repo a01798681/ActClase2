@@ -52,11 +52,11 @@ void merge(vector<double>& array, int left, int mid, int right) {
  * left: izquierda del subarreglo.
  * right: derecha del subarreglo.
  */
-void mergeSort(vector<double>& array, int left, int right) {
+void merge_Sort(vector<double>& array, int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
-        mergeSort(array, left, mid); // ordena una mitad
-        mergeSort(array, mid + 1, right); // ordena la otra mitad
+        merge_Sort(array, left, mid); // ordena una mitad
+        merge_Sort(array, mid + 1, right); // ordena la otra mitad
         merge(array, left, mid, right); // junta ambas partes ordenadas
     }
 }
